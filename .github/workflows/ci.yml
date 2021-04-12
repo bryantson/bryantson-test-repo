@@ -43,7 +43,7 @@ jobs:
       - name: Setup Build X
         uses: docker/setup-buildx-action@v1
         
-      ####################
+      ##############################
       # Build the Docker container #
       #############################
       - name: Build Docker container
