@@ -25,7 +25,7 @@ LABEL com.github.actions.name="Bryant Image" \
  #######################
  # Copy scripts to container #
  #############################
- COPY library /action/lib
+ COPY ./entrypoint.sh /action/lib
  
  #######################
  # Set the entrypoint #
