@@ -17,7 +17,6 @@ name: Continuous Testing
 on:
   push:
     branches-ignore:
-      - 'master'
       - 'main'
       
 ##################
