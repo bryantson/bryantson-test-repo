@@ -47,7 +47,7 @@ jobs:
       # Build the Docker container #
       #############################
       - name: Build Docker container
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v2.4.0
         with:
           context: .
           file: ./actions-a/Dockerfile
