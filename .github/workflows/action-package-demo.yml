@@ -34,7 +34,7 @@ jobs:
         with:
           push: true
           context: node-sample
-          tags: ghcr.io/${{ github.repository}}/nodejs-test-app:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository}}/nodejs-test-app:0.1
         
 
       
