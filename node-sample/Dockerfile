@@ -1,7 +1,11 @@
 FROM ghcr.io/bryantson/node:10
 
-WORKDIR .
+WORKDIR /app
+
+COPY ["package.json","package-lock.json*","./"]
 
 RUN npm install
+
+COPY . .
 
 CMD ["npm","start"]
