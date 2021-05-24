@@ -3,15 +3,15 @@ name: Pull and deploy to a cloud
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: 'Manual push"
+      test:
+        description: "Manual push"
         required: true
         default: "yes"
         
 jobs:
   say_hello:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.processAD == 'yes' }}
+    if: ${{ github.event.inputs.test == 'yes' }}
     
     steps:
       - name: Checkout
