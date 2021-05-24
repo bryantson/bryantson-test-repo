@@ -32,9 +32,9 @@ jobs:
         id: docker-build
         uses: docker/build-push-action@v2
         with:
-          push: false
+          push: true
           context: node-sample
-          tags: test-app/app-bryant:latest
+          tags: test-node-app/app-bryant:latest
         
 
       
