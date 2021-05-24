@@ -6,4 +6,4 @@ COPY ["package.json","./"]
 
 RUN install
 
-CMD ["node","server.js"]
+CMD ["npm","start"]
