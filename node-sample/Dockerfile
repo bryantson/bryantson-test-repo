@@ -1,6 +1,6 @@
 FROM ghcr.io/bryantson/node:10
 
-WORKDIR /src
+WORKDIR .
 
 COPY ["package.json","./"]
 
