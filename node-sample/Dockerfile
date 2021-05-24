@@ -1,4 +1,4 @@
-FROM ghcr.io/bryantson/nodejs:10
+FROM ghcr.io/bryantson/node:10
 
 WORKDIR /src
 
