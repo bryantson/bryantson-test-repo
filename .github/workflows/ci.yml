@@ -41,7 +41,7 @@ jobs:
       # Setup Docker Build X 
       #######################
       - name: Setup Build X
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v1.3.0
         
       ##############################
       # Build the Docker container #
