@@ -1,9 +1,9 @@
 {
  "name": "test-app",
  "scripts": {
-   "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "~4.16.1"
-   }
+  "start": "node server.js"
+ },
+ "dependencies": {
+  "express": "~4.16.1"
+ }
 }
