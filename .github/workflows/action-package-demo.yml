@@ -33,8 +33,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          context: node-sample
-          tags: test-node-app/app-bryant:latest
+          tags: ghcr.io/${{ github.repository}}/nodejs-test-app:${{ github.sha }}
         
 
       
