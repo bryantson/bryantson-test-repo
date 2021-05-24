@@ -4,6 +4,6 @@ WORKDIR /src
 
 COPY ["package.json","./"]
 
-RUN install
+RUN npm install
 
 CMD ["npm","start"]
