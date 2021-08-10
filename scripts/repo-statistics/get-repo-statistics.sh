@@ -392,10 +392,10 @@ GenerateFiles()
   # Create File Name #
   ####################
   # Example: MyOrg-all_repos-201901041059.csv
-  OUTPUT_FILE_NAME="all_repos-$DATE.csv"
+  OUTPUT_FILE_NAME="$ORG_NAME-all_repos-$DATE.csv"
 
   if [[ ${ANALYZE_CONFLICTS} -eq 1 ]]; then
-    repo_conflict_output_file="repo-conflicts-$DATE.csv"
+    repo_conflict_output_file="$ORG_NAME-repo-conflicts-$DATE.csv"
 
     if ! echo "conflict qty, repo name, org names" > "$repo_conflict_output_file"
     then
@@ -405,7 +405,7 @@ GenerateFiles()
   fi
 
   if [[ ${ANALYZE_TEAMS} -eq 1 ]]; then
-    team_conflict_output_file="team-conflicts-$DATE.csv"
+    team_conflict_output_file="$ORG_NAME-team-conflicts-$DATE.csv"
 
     if ! echo "conflict qty, team name, org names" > "$team_conflict_output_file"
     then
