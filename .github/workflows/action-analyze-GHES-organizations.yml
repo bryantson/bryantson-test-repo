@@ -1,0 +1,43 @@
+name: Discover the name of organizations from GHES and run analysis for each
+
+on:
+  workflow_dispatch:
+    inputs:
+      run-script:
+        description: "Do you want to run this action to discover organizations? (yes/no)"
+        required: true
+        default: 'yes'
+
+env:
+  GHES_HOST: ${{secrets.GHES_HOST}}
+  GHES_TOKEN: ${{secrets.GHES_TOKEN}}
+
+jobs:
+  discover-organizations:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: scripts/DiscoverOrganizations
+
+    if: ${{ github.event.inputs.run-script == 'yes' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Run a Python script to discover 
+        run: |
+          pip install -r requirements.txt
+          python discoverOrganizations.py
+          
+      - name: Test output
+        run: |
+          ls -ltr
+          pwd
+          
+      - name: Upload the list of organizations
+        uses: actions/upload-artifact@main
+        with:
+          name: GHES Organizations 
+          path: scripts/DiscoverOrganizations/organizations.txt
+          
